@@ -13,7 +13,7 @@ def generate_password(length=12, use_upper=True, use_digits=True, use_special=Tr
     if use_special:
         characters += string.punctuation
     
-    if length < 12:
+    if length < 12:     #nur bei input
         return "Passwort sollte mindestens 12 Zeichen lang sein."
     
     password = ''.join(random.choice(characters) for _ in range(length))
@@ -45,13 +45,13 @@ buttonOptions = {
     "relief": "raised"
 }
 
-lbAusgabe = tkinter.Label(fenster, text=" New Password ", **labelOptions)                  #lb = Label , Ausgabe
+lbAusgabe = tkinter.Label(fenster, text=" New Password ", **labelOptions)                 
 lbAusgabe.grid( sticky="w", padx=200, pady=50 )
 
 buMultiplikation = tkinter.Button(fenster, text=" >> generate << ", command=generate_password, **buttonOptions)   # bu = Button, command ruft die Funktion auf !
 buMultiplikation.grid(row=2, column=0, sticky="w", padx=200, pady=5)
 
-lbAusgabe = tkinter.Label(fenster, text="", **labelOptions)                  #lb = Label , Ausgabe
+lbAusgabe = tkinter.Label(fenster, text="", **labelOptions)                  #Ausgabe
 lbAusgabe.grid(row=3, column=0, sticky="w", padx=200, pady=5 )
 
 fenster.mainloop()
