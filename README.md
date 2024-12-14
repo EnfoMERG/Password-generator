@@ -1,4 +1,4 @@
-# Password-generator
+# Password Generator
 quick pw generator  ascii 12 digits long GUI= Tkinter
 
 Dark mode:
